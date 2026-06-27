@@ -1,26 +1,10 @@
-/* ==================================================
-   DEVSTORE LANDING PAGE
-   Projet : Hero Section - Semaine 3
-   Auteur : Jonathan Matondo
-   Technologies : HTML5 & CSS3
-================================================== */
-
-/* ===========================
-   RESET CSS
-=========================== */
-
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
 }
 
-/* ===========================
-   VARIABLES
-=========================== */
-
 :root{
-
     --primary:#2563eb;
     --primary-dark:#1d4ed8;
     --secondary:#0f172a;
@@ -29,574 +13,312 @@
     --white:#ffffff;
     --shadow:0 15px 35px rgba(0,0,0,.12);
     --radius:16px;
-
 }
 
-/* ===========================
-   STYLE GENERAL
-=========================== */
-
 html{
-
     scroll-behavior:smooth;
-
 }
 
 body{
-
     font-family:"Poppins",sans-serif;
-
     background:linear-gradient(135deg,#eff6ff,#f8fafc);
-
     color:var(--secondary);
-
     line-height:1.7;
-
 }
 
 img{
-
     display:block;
-
     max-width:100%;
-
 }
 
 a{
-
     text-decoration:none;
-
 }
-
-/* ===========================
-   HEADER
-=========================== */
 
 header{
-
     background:rgba(255,255,255,.95);
-
     backdrop-filter:blur(10px);
-
     position:sticky;
-
     top:0;
-
     z-index:1000;
-
     box-shadow:0 2px 10px rgba(0,0,0,.08);
-
 }
-
-/* Navigation */
 
 nav{
-
     width:90%;
-
     max-width:1200px;
-
     margin:auto;
-
     display:flex;
-
     justify-content:space-between;
-
     align-items:center;
-
     padding:20px 0;
-
 }
-
-/* Logo */
 
 .logo img{
-
     width:170px;
-
 }
 
-/* Menu */
-
 nav ul{
-
     display:flex;
-
     gap:35px;
-
     list-style:none;
-
 }
 
 nav a{
-
     color:var(--secondary);
-
     font-weight:600;
-
     transition:.3s;
-
 }
 
 nav a:hover{
-
     color:var(--primary);
-
 }
 
-/* Bouton Connexion */
-
 .login-btn{
-
     background:var(--primary);
-
     color:white;
-
     padding:12px 24px;
-
     border-radius:10px;
-
     transition:.3s;
-
     font-weight:600;
-
 }
 
 .login-btn:hover{
-
     background:var(--primary-dark);
-
 }
-
-/* ===========================
-   HERO
-=========================== */
 
 .hero{
-
     width:90%;
-
     max-width:1200px;
-
     margin:90px auto;
-
     display:flex;
-
     align-items:center;
-
     justify-content:space-between;
-
     gap:60px;
-
     flex-wrap:wrap;
-
 }
-
-/* Texte */
 
 .hero-content{
-
     flex:1;
-
     min-width:320px;
-
 }
-
-/* Badge */
 
 .badge{
-
     display:inline-block;
-
     background:#dbeafe;
-
     color:var(--primary);
-
     padding:10px 18px;
-
     border-radius:40px;
-
     font-size:.9rem;
-
     font-weight:600;
-
     margin-bottom:25px;
-
 }
-
-/* Titre */
 
 .hero-content h1{
-
     font-size:3.4rem;
-
     line-height:1.2;
-
     margin-bottom:25px;
-
 }
-
-/* Description */
 
 .hero-content p{
-
     color:var(--text);
-
     margin-bottom:35px;
-
     font-size:1.1rem;
-
 }
 
-/* Boutons */
-
 .buttons{
-
     display:flex;
-
     gap:20px;
-
     flex-wrap:wrap;
-
     margin-bottom:50px;
-
 }
 
 .primary-btn{
-
     background:var(--primary);
-
     color:white;
-
     padding:15px 30px;
-
     border-radius:12px;
-
     font-weight:600;
-
     transition:.3s;
-
 }
 
 .primary-btn:hover{
-
     background:var(--primary-dark);
-
     transform:translateY(-4px);
-
 }
 
 .secondary-btn{
-
     border:2px solid var(--primary);
-
     color:var(--primary);
-
     padding:15px 30px;
-
     border-radius:12px;
-
     font-weight:600;
-
     transition:.3s;
-
 }
 
 .secondary-btn:hover{
-
     background:var(--primary);
-
     color:white;
-
 }
 
-/* ===========================
-   STATISTIQUES
-=========================== */
-
 .hero-stats{
-
     display:flex;
-
     gap:40px;
-
     flex-wrap:wrap;
-
 }
 
 .hero-stats article{
-
     background:white;
-
     padding:25px;
-
     border-radius:15px;
-
     box-shadow:var(--shadow);
-
     min-width:140px;
-
     text-align:center;
-
 }
 
 .hero-stats h3{
-
     color:var(--primary);
-
     font-size:2rem;
-
 }
 
 .hero-stats p{
-
     margin-top:5px;
-
     margin-bottom:0;
-
 }
 
-/* ===========================
-   IMAGE HERO
-=========================== */
-
 .hero-image{
-
     flex:1;
-
     display:flex;
-
     justify-content:center;
-
     min-width:320px;
-
 }
 
 .hero-image img{
-
     width:100%;
-
     max-width:520px;
-
     animation:float 4s ease-in-out infinite;
-
 }
-
-/* Animation */
 
 @keyframes float{
-
     0%{
-
         transform:translateY(0);
-
     }
-
     50%{
-
         transform:translateY(-18px);
-
     }
-
     100%{
-
         transform:translateY(0);
-
     }
-
 }
 
-/* ===========================
-   RESPONSIVE
-=========================== */
-
 @media(max-width:992px){
-
     .hero{
-
         flex-direction:column-reverse;
-
         text-align:center;
-
     }
-
     .buttons{
-
         justify-content:center;
-
     }
-
     .hero-stats{
-
         justify-content:center;
-
     }
-
 }
 
 @media(max-width:768px){
-
     nav{
-
         flex-direction:column;
-
         gap:25px;
-
     }
-
     nav ul{
-
         flex-direction:column;
-
         align-items:center;
-
     }
 
     .hero-content h1{
-
         font-size:2.5rem;
-
     }
 
 }
 
 @media(max-width:480px){
-
     .hero-content h1{
-
         font-size:2rem;
-
     }
-
     .badge{
-
         font-size:.8rem;
-
     }
-
     .buttons{
-
         flex-direction:column;
-
     }
-
     .primary-btn,
-
     .secondary-btn{
-
         width:100%;
-
         text-align:center;
-
     }
-
 }
 
-/* ==========================================
-   FOOTER
-========================================== */
-
 footer{
-
     background:#0f172a;
-
     color:white;
-
     margin-top:100px;
-
     padding:60px 10% 25px;
-
 }
 
 .footer-container{
-
     max-width:1200px;
-
     margin:auto;
-
     display:grid;
-
     grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-
     gap:50px;
-
 }
 
 .footer-brand img{
-
     width:180px;
-
     margin-bottom:20px;
-
 }
 
 .footer-brand p{
-
     color:#cbd5e1;
-
 }
 
 .footer-links h3,
 .footer-contact h3{
-
     margin-bottom:20px;
-
 }
 
 .footer-links ul{
-
     list-style:none;
-
 }
 
 .footer-links li{
-
     margin-bottom:12px;
-
 }
 
 .footer-links a{
-
     color:#cbd5e1;
-
     transition:.3s;
-
 }
 
 .footer-links a:hover{
-
     color:#60a5fa;
-
 }
 
 .footer-contact p{
-
     margin-bottom:12px;
-
     color:#cbd5e1;
-
 }
 
 footer hr{
-
     margin:45px 0 25px;
-
     border:none;
-
     border-top:1px solid #334155;
-
 }
 
 .copyright{
-
     text-align:center;
-
 }
 
 .copyright p{
-
     color:#94a3b8;
-
     margin-bottom:10px;
-
 }
